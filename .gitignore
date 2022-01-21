@@ -55,7 +55,6 @@ build/
 /local.properties
 /app/release
 /app/debug
-.DS_Store
 /captures
 
 .idea/*
