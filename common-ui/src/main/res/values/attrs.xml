@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <attr name="_color_background" format="color"/>
-    <attr name="_color_background_inverse" format="color"/>
-    <attr name="_color_txt" format="color"/>
+    <attr name="_color_background" format="color" />
+    <attr name="_color_background_inverse" format="color" />
+    <attr name="_color_txt" format="color" />
 </resources>

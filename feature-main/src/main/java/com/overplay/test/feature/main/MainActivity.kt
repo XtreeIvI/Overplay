@@ -1,6 +1,5 @@
 package com.overplay.test.feature.main
 
-
 import com.overplay.test.common.ui.base.BaseActivity
 import com.overplay.test.common.ui.ext.viewBindingInflate
 import com.overplay.test.feature.main.databinding.ActivityMainBinding

@@ -18,5 +18,5 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="AppTheme" parent="BaseAppTheme"/>
+    <style name="AppTheme" parent="BaseAppTheme" />
 </resources>

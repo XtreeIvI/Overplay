@@ -17,5 +17,5 @@
         <item name="_color_txt">#FFFFFF</item>
     </style>
 
-    <style name="AppTheme" parent="BaseAppTheme"/>
+    <style name="AppTheme" parent="BaseAppTheme" />
 </resources>

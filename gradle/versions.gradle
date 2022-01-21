@@ -15,7 +15,7 @@ ext.v = [
         // org.jetbrains.kotlinx:
         // org.jetbrains.kotlinx:kotlinx-coroutines-android:
         // https://mvnrepository.com/artifact/org.jetbrains.kotlinx/kotlinx-coroutines-core
-        kotlinX                     : "1.6.0",
+        kotlinX                    : "1.6.0",
 
         //region Google
         // Google Services plugin (needed for Firebase Crashlytics plugin)
@@ -227,7 +227,7 @@ ext.v = [
         // com.github.KalebKE:FSensor:
         // https://github.com/KalebKE/FSensor
         // https://mvnrepository.com/artifact/com.github.KalebKE/FSensor
-        fsensor: "v2.1",
+        fsensor                    : "v2.1",
 
         // MixPanel's analytics SDK
         // com.mixpanel.android:mixpanel-android:
@@ -331,10 +331,10 @@ ext.v = [
         //region Zendesk
         // com.zendesk:messaging:
         // https://developer.zendesk.com/documentation/classic-web-widget-sdks/unified-sdk/android/sdk_add/
-        zendeskCore: "5.2.3",
+        zendeskCore                : "5.2.3",
 
         // com.zendesk:support:
         // https://developer.zendesk.com/documentation/classic-web-widget-sdks/unified-sdk/android/sdk_add/
-        zendeskSupport: "5.0.6",
+        zendeskSupport             : "5.0.6",
         //endregion Zendesk
 ]

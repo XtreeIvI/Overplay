@@ -1,9 +1,9 @@
 package com.overplay.test.feature.gyroscope.model
 
 data class RotationData(
-        val x: Float = 0.0F,
-        val y: Float = 0.0F,
-        val z: Float = 0.0F
+    val x: Float = 0.0F,
+    val y: Float = 0.0F,
+    val z: Float = 0.0F
 ) {
     val xDegree: Float by lazy {
         convertToReadableDegree(x)
