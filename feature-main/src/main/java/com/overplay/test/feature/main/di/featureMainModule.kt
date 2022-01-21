@@ -8,7 +8,8 @@ val featureMainModule = module {
 
     viewModel {
         MainViewModel(
-            get()
+            sessionCounterRepository = get(),
+            deviceRotationManager = get(),
         )
     }
 }

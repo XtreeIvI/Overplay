@@ -19,4 +19,5 @@ dependencies {
     implementation project(path: ':data-sessioncounter:local:impl')
     implementation project(path: ':data-sessioncounter:impl')
     implementation project(path: ':feature-main')
+    implementation project(path: ':feature-gyroscope:impl')
 }

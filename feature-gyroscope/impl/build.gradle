@@ -1,0 +1,7 @@
+apply from: "$rootDir/basedataandroid.gradle"
+
+dependencies {
+    implementation project(path: ':feature-gyroscope')
+
+    implementation libs.utils.fsensor
+}

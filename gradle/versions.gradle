@@ -223,6 +223,12 @@ ext.v = [
         // https://mvnrepository.com/artifact/com.jakewharton.timber/timber
         timber                     : "5.0.1",
 
+        // Motion Sensor Helper
+        // com.github.KalebKE:FSensor:
+        // https://github.com/KalebKE/FSensor
+        // https://mvnrepository.com/artifact/com.github.KalebKE/FSensor
+        fsensor: "v2.1",
+
         // MixPanel's analytics SDK
         // com.mixpanel.android:mixpanel-android:
         // https://developer.mixpanel.com/docs/quick-start-guide

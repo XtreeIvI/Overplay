@@ -4,4 +4,5 @@ apply from: "$rootDir/baseui.gradle"
 dependencies {
     implementation project(path: ':common-ui')
     implementation project(path: ':data-sessioncounter')
+    implementation project(path: ':feature-gyroscope')
 }

@@ -7,7 +7,7 @@ ext.libs = [
                 stdlibJdk8       : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$v.kotlin",
                 reflect          : "org.jetbrains.kotlin:kotlin-reflect:$v.kotlin",
                 coroutinesAndroid: "org.jetbrains.kotlinx:kotlinx-coroutines-android:$v.kotlinX",
-                coroutinesCore: "org.jetbrains.kotlinx:kotlinx-coroutines-core:$v.kotlinX",
+                coroutinesCore   : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$v.kotlinX",
                 coroutinesCoreJvm: "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:$v.kotlinX",
                 gradlePlugin     : "org.jetbrains.kotlin:kotlin-gradle-plugin:$v.kotlin",
         ],
@@ -149,6 +149,7 @@ ext.libs = [
 
                 timber             : "com.jakewharton.timber:timber:$v.timber",
                 libPhoneNumberUtils: "io.michaelrocks:libphonenumber-android:$v.libPhoneNumberUtils",
+                fsensor            : "com.github.KalebKE:FSensor:$v.fsensor",
         ],
 
         analytics          : [

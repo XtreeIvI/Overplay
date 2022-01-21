@@ -19,5 +19,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         sessionCounterLiveData.observe {
             viewBinding.txtMainSessionCounter.text = it.toString()
         }
+
+        yRotationLiveData.observe {
+            viewBinding.txtMainSessionCounter.text = it.toString()
+        }
     }
 }

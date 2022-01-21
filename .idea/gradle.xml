@@ -17,6 +17,8 @@
             <option value="$PROJECT_DIR$/data-sessioncounter/impl" />
             <option value="$PROJECT_DIR$/data-sessioncounter/local" />
             <option value="$PROJECT_DIR$/data-sessioncounter/local/impl" />
+            <option value="$PROJECT_DIR$/feature-gyroscope" />
+            <option value="$PROJECT_DIR$/feature-gyroscope/impl" />
             <option value="$PROJECT_DIR$/feature-main" />
           </set>
         </option>

@@ -14,6 +14,8 @@ include ':common-ui'
 include ':common-localsource'
 
 include ':feature-main'
+include ':feature-gyroscope'
+include ':feature-gyroscope:impl'
 
 include ':data-sessioncounter'
 include ':data-sessioncounter:local'
