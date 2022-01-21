@@ -13,6 +13,7 @@
         android:layout_marginTop="-16dp"
         android:layout_marginEnd="@dimen/offset_2x"
         android:adjustViewBounds="true"
+        android:importantForAccessibility="no"
         android:scaleType="centerInside"
         android:src="@drawable/overplay_logo"
         app:layout_constraintBottom_toBottomOf="parent"

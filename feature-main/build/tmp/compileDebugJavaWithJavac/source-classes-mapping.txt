@@ -1,4 +1,0 @@
-com/overplay/test/feature/main/BuildConfig.java
- com.overplay.test.feature.main.BuildConfig
-com/overplay/test/feature/main/databinding/ActivityMainBinding.java
- com.overplay.test.feature.main.databinding.ActivityMainBinding

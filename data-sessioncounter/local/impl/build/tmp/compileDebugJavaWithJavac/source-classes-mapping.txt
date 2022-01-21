@@ -1,2 +1,0 @@
-com/overplay/test/data/sessioncounter/local/impl/BuildConfig.java
- com.overplay.test.data.sessioncounter.local.impl.BuildConfig

@@ -1,2 +1,0 @@
-com/overplay/test/common/ui/BuildConfig.java
- com.overplay.test.common.ui.BuildConfig
