@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Overplay</string>
+    <string name="author_disclaimer">Made by Mykola Melnyk as part of Tech Review for Overplay</string>
+    <string name="session_counter">Session counter</string>
+</resources>

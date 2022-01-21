@@ -1,0 +1,21 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+    }
+}
+rootProject.name = "Overplay"
+
+include ':app'
+
+include ':common-ui'
+include ':common-localsource'
+
+include ':feature-main'
+
+include ':data-sessioncounter'
+include ':data-sessioncounter:local'
+include ':data-sessioncounter:local:impl'
+include ':data-sessioncounter:impl'

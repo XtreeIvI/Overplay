@@ -1,0 +1,12 @@
+// Common Gradle settings for all data modules.
+
+apply plugin: 'kotlin'
+apply plugin: 'kotlin-kapt'
+
+apply from: "$rootDir/gradle/libs.gradle"
+
+dependencies {
+    implementation libs.kotlin.stdlibJdk8
+    implementation libs.kotlin.coroutinesCore
+}
+

@@ -1,0 +1,2 @@
+com/overplay/test/common/local/source/BuildConfig.java
+ com.overplay.test.common.local.source.BuildConfig

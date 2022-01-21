@@ -1,0 +1,6 @@
+apply from: "$rootDir/basedataandroid.gradle"
+
+dependencies {
+    implementation project(path: ':common-localsource')
+    implementation project(path: ':data-sessioncounter:local')
+}

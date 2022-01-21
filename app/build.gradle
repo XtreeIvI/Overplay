@@ -1,0 +1,22 @@
+apply from: "$rootDir/baseapp.gradle"
+apply from: "$rootDir/gradle/libs.gradle"
+
+android {
+
+    defaultConfig {
+        applicationId "com.overplay.test"
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix '.debug'
+        }
+    }
+}
+
+dependencies {
+    implementation project(path: ':common-ui')
+    implementation project(path: ':data-sessioncounter:local:impl')
+    implementation project(path: ':data-sessioncounter:impl')
+    implementation project(path: ':feature-main')
+}

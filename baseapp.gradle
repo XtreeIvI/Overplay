@@ -1,0 +1,39 @@
+// Common Gradle settings for all Android app modules.
+
+// Android app
+apply plugin: 'com.android.application'
+apply from: "$rootDir/baseui.gradle"
+apply from: "$rootDir/gradle/libs.gradle"
+
+android {
+
+    defaultConfig {
+        versionCode 1
+        versionName "1.0"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_11.toString()
+    }
+
+    buildTypes {
+        debug {
+
+        }
+
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    // Stub. Common dependencies for app modules
+}

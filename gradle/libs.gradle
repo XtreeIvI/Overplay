@@ -1,0 +1,196 @@
+apply from: "$rootDir/gradle/versions.gradle"
+ext.libs = [
+
+        androidGradlePlugin: "com.android.tools.build:gradle:$v.androidGradlePlugin",
+
+        kotlin             : [
+                stdlibJdk8       : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$v.kotlin",
+                reflect          : "org.jetbrains.kotlin:kotlin-reflect:$v.kotlin",
+                coroutinesAndroid: "org.jetbrains.kotlinx:kotlinx-coroutines-android:$v.kotlinX",
+                coroutinesCore: "org.jetbrains.kotlinx:kotlinx-coroutines-core:$v.kotlinX",
+                coroutinesCoreJvm: "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:$v.kotlinX",
+                gradlePlugin     : "org.jetbrains.kotlin:kotlin-gradle-plugin:$v.kotlin",
+        ],
+
+        google             : [
+                places        : "com.google.android.libraries.places:places:$v.places",
+                materialDesign: "com.google.android.material:material:$v.materialDesign",
+
+                exoplayer     : [
+                        code: "com.google.android.exoplayer:exoplayer-core:$v.exoplayer",
+                        dash: "com.google.android.exoplayer:exoplayer-dash:$v.exoplayer",
+                        ui  : "com.google.android.exoplayer:exoplayer-ui:$v.exoplayer",
+                ],
+
+                firebase      : [
+                        bom                        : "com.google.firebase:firebase-bom:$v.firebaseBom",
+                        fcm                        : "com.google.firebase:firebase-messaging",
+                        commonKtx                  : "com.google.firebase:firebase-common-ktx",
+                        remoteConfigKtx            : "com.google.firebase:firebase-config-ktx",
+                        dynamicLinksKtx            : "com.google.firebase:firebase-dynamic-links-ktx",
+                        analyticsKtx               : "com.google.firebase:firebase-analytics-ktx",
+                        crashlyticsKtx             : "com.google.firebase:firebase-crashlytics-ktx",
+                        appDistributionGradlePlugin: "com.google.firebase:firebase-appdistribution-gradle:$v.appDistributionGradlePlugin",
+                        crashlyticsGradlePlugin    : "com.google.firebase:firebase-crashlytics-gradle:$v.crashlyticsGradlePlugin",
+                ],
+
+                gms           : [
+                        googleServices: "com.google.gms:google-services:$v.googleServices",
+                ],
+
+                test          : [
+                        truth: "com.google.truth:truth:$v.testExt",
+                ],
+        ],
+
+        androidx           : [
+                coreKtx           : "androidx.core:core-ktx:$v.androidxCoreKtx",
+                // widgets and other UI components compatibility
+                appcompat         : "androidx.appcompat:appcompat:$v.appcompat",
+                activityKtx       : "androidx.activity:activity-ktx:$v.activityKtx",
+                fragmentKtx       : "androidx.fragment:fragment-ktx:$v.fragmentKtx",
+                constraintLayout  : "androidx.constraintlayout:constraintlayout:$v.constraintLayout",
+                drawerLayout      : "androidx.drawerlayout:drawerlayout:$v.drawerLayout",
+                swipeRefreshLayout: "androidx.swiperefreshlayout:swiperefreshlayout:$v.swipeRefreshLayout",
+                recyclerView      : "androidx.recyclerview:recyclerview:$v.recyclerView",
+
+                lifecycle         : [
+                        coreKtx     : "androidx.lifecycle:lifecycle-livedata-core-ktx:$v.lifecycle",
+                        liveDataKtx : "androidx.lifecycle:lifecycle-livedata-ktx:$v.lifecycle",
+                        viewmodelKtx: "androidx.lifecycle:lifecycle-viewmodel-ktx:$v.lifecycle",
+                        savedState  : "androidx.lifecycle:lifecycle-viewmodel-savedstate:$v.lifecycle",
+                        // for Java8
+                        commonJava8 : "androidx.lifecycle:lifecycle-common-java8:$v.lifecycle",
+                        // for implementing LifecycleOwner in a Service
+                        service     : "androidx.lifecycle:lifecycle-service:$v.lifecycle",
+                        // ProcessLifecycleOwner provides a lifecycle for the whole application process
+                        process     : "androidx.lifecycle:lifecycle-process:$v.lifecycle",
+                        // ReactiveStreams support for LiveData
+                        rxKTx       : "androidx.lifecycle:lifecycle-reactivestreams-ktx:$v.lifecycle",
+                ],
+
+                workManager       : [
+                        runtimeKtx: "androidx.work:work-runtime-ktx:$v.workManager",
+                        rxJava2   : "androidx.work:work-rxjava2:$v.workManager",
+                ],
+
+                test              : [
+                        archCore    : "androidx.arch.core:core-testing:$v.archTestCore",
+                        coreKtx     : "androidx.test:core-ktx:$v.testCore",
+                        runner      : "androidx.test:runner:$v.testCore",
+                        rules       : "androidx.test:rules:$v.testCore",
+                        junitKtx    : "androidx.test.ext:junit-ktx:$v.testExt",
+                        truth       : "androidx.test.ext:truth:$v.testCore",
+                        orchestrator: "androidx.test:orchestrator:$v.testOrchestrator",
+
+                        espresso    : [
+                                contib          : "androidx.test.espresso:espresso-contrib:$v.espresso",
+                                core            : "androidx.test.espresso:espresso-core:$v.espresso",
+                                intents         : "androidx.test.espresso:espresso-intents:$v.espresso",
+                                idlingConcurrent: "androidx.test.espresso.idling:idling-concurrent:$v.espresso",
+                                idlingResource  : "androidx.test.espresso:espresso-idling-resource:$v.espresso",
+                                web             : "androidx.test.espresso:espresso-web:$v.espresso",
+                                accessibility   : "androidx.test.espresso:espresso-accessibility:$v.espresso",
+                                remote          : "androidx.test.espresso:espresso-remote:$v.espresso",
+                        ],
+                ],
+
+                navigation        : [
+                        fragmentKtx            : "androidx.navigation:navigation-fragment-ktx:$v.navigation",
+                        uiKtx                  : "androidx.navigation:navigation-ui-ktx:$v.navigation",
+                        dynamicFeaturesFragment: "androidx.navigation:navigation-dynamic-features-fragment:$v.navigation",
+                        safeArgsGradlePlugin   : "androidx.navigation:navigation-safe-args-gradle-plugin:$v.navigation"
+                ],
+        ],
+
+        rxJava             : [
+                rxAndroid: "io.reactivex.rxjava2:rxandroid:$v.rxAndroid",
+                rxKotlin : "io.reactivex.rxjava2:rxkotlin:$v.rxKotlin",
+        ],
+
+        di                 : [
+                koin: [
+                        core      : "io.insert-koin:koin-core-ext:$v.koinCoreExt",
+                        android   : "io.insert-koin:koin-android:$v.koinAndroid",
+                        androidExt: "io.insert-koin:koin-android-ext:$v.koinAndroidExt",
+                        test      : "io.insert-koin:koin-test:$v.koinTest",
+                ],
+        ],
+
+        payments           : [
+                stripe    : "com.stripe:stripe-android:$v.stripe",
+                revenuecat: "com.revenuecat.purchases:purchases:$v.revenuecat",
+        ],
+
+        utils              : [
+
+                glide              : [
+                        core        : "com.github.bumptech.glide:glide:$v.glide",
+                        kaptCompiler: "com.github.bumptech.glide:compiler:$v.glide",
+                ],
+
+                network            : [
+                        retrofit          : [
+                                core          : "com.squareup.retrofit2:retrofit:$v.retrofit",
+                                rxJava2       : "com.squareup.retrofit2:adapter-rxjava2:$v.retrofit",
+                                converterMoshi: "com.squareup.retrofit2:converter-moshi:$v.retrofit",
+                        ],
+
+                        moshi             : [
+                                kotlin           : "com.squareup.moshi:moshi-kotlin:$v.moshi",
+                                kaptKotlinCodegen: "com.squareup.moshi:moshi-kotlin-codegen:$v.moshi",
+                                adapters         : "com.squareup.moshi:moshi-adapters:$v.moshi",
+                        ],
+
+                        cookieJar         : "com.github.franmontiel:PersistentCookieJar:$v.cookieJar",
+                        okhttp            : "com.squareup.okhttp3:okhttp:$v.okhttp3",
+                        loggingInterceptor: "com.squareup.okhttp3:logging-interceptor:$v.okhttp3",
+                ],
+
+                timber             : "com.jakewharton.timber:timber:$v.timber",
+                libPhoneNumberUtils: "io.michaelrocks:libphonenumber-android:$v.libPhoneNumberUtils",
+        ],
+
+        analytics          : [
+                mixpanel: "com.mixpanel.android:mixpanel-android:$v.mixpanel",
+        ],
+
+        zendesk            : [
+                core            : "com.zendesk:messaging:$v.zendeskCore",
+                support         : "com.zendesk:support:$v.zendeskSupport",
+                supportProviders: "com.zendesk:support-providers:$v.zendeskSupport",
+        ],
+
+        ui                 : [
+                webKit                          : "androidx.webkit:webkit:$v.webKit",
+                facebookShimmer                 : "com.facebook.shimmer:shimmer:$v.facebookShimmer",
+                pageIndicator                   : "com.romandanylyk:pageindicatorview:$v.pageIndicator",
+                smartRefreshLayout              : "io.github.scwang90:refresh-layout-kernel:$v.smartRefreshLayout",
+                smartRefreshLayoutMaterialHeader: "io.github.scwang90:refresh-header-material:$v.smartRefreshLayout",
+        ],
+
+        debug              : [
+                autoService: "com.google.auto.service:auto-service:$v.autoService",
+                chucker    : "com.github.chuckerteam.chucker:library:$v.chucker",
+                lynx       : "com.github.pedrovgs:lynx:$v.lynx",
+                hyperion   : [
+                        core        : "com.willowtreeapps.hyperion:hyperion-core:$v.hyperion",
+                        attr        : "com.willowtreeapps.hyperion:hyperion-attr:$v.hyperion",
+                        buildConfig : "com.willowtreeapps.hyperion:hyperion-build-config:$v.hyperion",
+                        crash       : "com.willowtreeapps.hyperion:hyperion-crash:$v.hyperion",
+                        disk        : "com.willowtreeapps.hyperion:hyperion-disk:$v.hyperion",
+                        sharedGeiger: "com.willowtreeapps.hyperion:hyperion-geiger-counter:$v.hyperion",
+                        measurement : "com.willowtreeapps.hyperion:hyperion-measurement:$v.hyperion",
+                        phoenix     : "com.willowtreeapps.hyperion:hyperion-phoenix:$v.hyperion",
+                        recorder    : "com.willowtreeapps.hyperion:hyperion-recorder:$v.hyperion",
+                        sharedPrefs : "com.willowtreeapps.hyperion:hyperion-shared-preferences:$v.hyperion",
+                        plugin      : "com.willowtreeapps.hyperion:hyperion-plugin:$v.hyperion",
+                        appInfo     : "com.star_zero:hyperion-appinfo:$v.hyperionAppInfo",
+                ],
+        ],
+
+        test               : [
+                junit: "junit:junit:$v.junit",
+        ],
+]
+

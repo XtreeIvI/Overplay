@@ -1,0 +1,8 @@
+apply from: "$rootDir/basedataandroid.gradle"
+
+dependencies {
+    implementation project(path: ':data-sessioncounter')
+    implementation project(path: ':data-sessioncounter:local')
+
+    implementation libs.androidx.lifecycle.process
+}

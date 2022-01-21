@@ -1,0 +1,48 @@
+// Common Gradle settings for all Android data modules.
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-parcelize'
+apply from: "$rootDir/gradle/libs.gradle"
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_11.toString()
+    }
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        debug {
+
+        }
+        release {
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), '../proguard-rules.pro'
+            minifyEnabled true
+        }
+    }
+}
+
+dependencies {
+    implementation libs.kotlin.stdlibJdk8
+    implementation libs.kotlin.coroutinesAndroid
+
+    //region Koin - Dependency Injection
+    implementation libs.di.koin.core
+    implementation libs.di.koin.android
+    implementation libs.di.koin.androidExt
+    //endregion Koin - Dependency Injection
+}

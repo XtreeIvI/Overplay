@@ -1,0 +1,75 @@
+// Common Gradle settings for all Android library modules.
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-parcelize'
+apply plugin: 'kotlin-kapt'
+
+apply from: "$rootDir/gradle/libs.gradle"
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_11.toString()
+    }
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        debug {
+        }
+        release {
+            minifyEnabled true
+            //shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation libs.kotlin.stdlibJdk8
+    implementation libs.kotlin.reflect
+
+    //region AndroidX
+    // region AndroidX Lifecycle, LiveData & Extensions
+    implementation libs.androidx.lifecycle.liveDataKtx
+    implementation libs.androidx.lifecycle.viewmodelKtx
+    implementation libs.androidx.lifecycle.savedState
+    implementation libs.androidx.lifecycle.commonJava8
+    implementation libs.androidx.lifecycle.process
+    implementation libs.androidx.lifecycle.rxKTx
+    // endregion AndroidX Lifecycle, LiveData & Extensions
+
+    implementation libs.androidx.coreKtx
+    implementation libs.androidx.appcompat
+    implementation libs.androidx.activityKtx
+    implementation libs.androidx.constraintLayout
+    //endregion AndroidX
+
+    //region UI
+    implementation libs.google.materialDesign
+    //endregion UI
+
+    //region Koin - Dependency Injection
+    implementation libs.di.koin.core
+    implementation libs.di.koin.android
+    implementation libs.di.koin.androidExt
+    //endregion Koin - Dependency Injection
+}
