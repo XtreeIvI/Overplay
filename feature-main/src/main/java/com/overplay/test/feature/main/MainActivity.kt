@@ -1,6 +1,7 @@
 package com.overplay.test.feature.main
 
 import com.overplay.test.common.ui.base.BaseActivity
+import com.overplay.test.common.ui.ext.scale
 import com.overplay.test.common.ui.ext.viewBindingInflate
 import com.overplay.test.feature.main.databinding.ActivityMainBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -20,7 +21,11 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         }
 
         yRotationLiveData.observe {
-            viewBinding.txtMainSessionCounter.text = it.toString()
+            viewBinding.rotationViewMainSessionIndicator.value = it.toDouble()
+        }
+
+        textScaleLiveData.observe {
+            viewBinding.txtMainSessionCounter.scale(it)
         }
     }
 }

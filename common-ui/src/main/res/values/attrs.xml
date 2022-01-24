@@ -2,5 +2,11 @@
 <resources>
     <attr name="_color_background" format="color" />
     <attr name="_color_background_inverse" format="color" />
+
+    <attr name="_color_secondary" format="color" />
+    <attr name="_color_secondary_variant" format="color" />
+
     <attr name="_color_txt" format="color" />
+    <attr name="_color_txt_secondary" format="color" />
+
 </resources>

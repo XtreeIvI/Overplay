@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:clipChildren="false"
     tools:context=".MainActivity">
 
     <ImageView
@@ -38,7 +40,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/offset_2x"
+            android:layout_marginBottom="@dimen/offset_4x"
             android:text="@string/session_counter"
             android:textAllCaps="true"
             android:textColor="?_color_txt"
@@ -54,6 +56,7 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/txtMainSessionCounterAuthor"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/offset_2x"
@@ -62,7 +65,16 @@
         android:maxLines="2"
         android:text="@string/author_disclaimer"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.overplay.test.feature.main.view.RotationView
+        android:id="@+id/rotationViewMainSessionIndicator"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/txtMainSessionCounterAuthor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/offset_4x" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
